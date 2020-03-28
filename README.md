@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-28 10:35:53
+ * @LastEditTime: 2020-03-28 10:38:05
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \BUCT_nCoV_Report\README.md
+ -->
 # BUCT_nCoV_Report
 基于 Python3 的适用于北京化工大学的 nCoV 自动填报脚本
 
@@ -14,7 +22,7 @@
 5. 执行 `report.py`
 
 ## 自动化
-
+### Window：任务计划程序
 ### Linux：使用 Crontab
 
 ```shell script
