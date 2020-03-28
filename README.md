@@ -6,8 +6,8 @@
  * @Description: In User Settings Edit
  * @FilePath: \BUCT_nCoV_Report\README.md
  -->
-# BUCT_nCoV_Report
-基于 Python3 的适用于北京化工大学的 nCoV 自动填报脚本
+# BUCT_COVID-19_Report
+基于 Python3 的适用于北京化工大学的 COVID-19 自动填报脚本
 
 ## 使用方式
 
