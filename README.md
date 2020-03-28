@@ -21,6 +21,10 @@
 4. 安装所需依赖：`pip3 install requests`
 5. 执行 `report.py`
 
+## 抓包方法
+
+可以使用`Fiddler` + `企业微信` 进行抓包获得cookies
+
 ## 自动化
 ### Window：任务计划程序
 
