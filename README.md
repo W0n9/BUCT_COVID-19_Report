@@ -24,6 +24,7 @@
 ## 抓包方法
 
 可以使用`Fiddler` + `企业微信` 进行抓包获得cookies
+![Fiddler截图](images/3.png)
 
 ## 自动化
 ### Window：任务计划程序
