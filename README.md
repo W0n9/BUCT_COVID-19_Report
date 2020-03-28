@@ -1,5 +1,5 @@
 # BUCT_nCoV_Report
-基于 Python3 的适用于化工大学的 nCoV 自动填报脚本
+基于 Python3 的适用于北京化工大学的 nCoV 自动填报脚本
 
 ## 使用方式
 
