@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-28 10:35:53
+ * @LastEditTime: 2020-03-28 10:44:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \BUCT_nCoV_Report\README.md
+ -->
 # BUCT_nCoV_Report
 基于 Python3 的适用于北京化工大学的 nCoV 自动填报脚本
 
@@ -14,6 +22,13 @@
 5. 执行 `report.py`
 
 ## 自动化
+### Window：任务计划程序
+
+1. 在 windows搜索：“计算机管理”，进入如下界面：
+![搜索界面](images/1.png)
+![应用界面](images/2.png)
+2. 选择 系统工具 -->  任务计划程序 ，点击右侧的  “创建基本任务”，进入如下界面
+3. 参考这篇博文：https://blog.csdn.net/u012849872/article/details/82719372
 
 ### Linux：使用 Crontab
 
