@@ -8,9 +8,10 @@
     'eai-sess':'', 
 	  'UUkey':''
     ```
-2. 修改 `report.py` 内的经纬度和地址信息（可选)
-3. 安装所需依赖：`pip3 install requests`
-4. 执行 `report.py`
+2. 修改 `report.py` 内的经纬度（可选)
+3. 填写 `province` 和 `city`避免报 `上报位置不能为空` 错误
+4. 安装所需依赖：`pip3 install requests`
+5. 执行 `report.py`
 
 ## 自动化
 
