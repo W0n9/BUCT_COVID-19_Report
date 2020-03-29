@@ -50,5 +50,3 @@ sudo crontab -e
 0 6 * * * python3 main.py
 ```
 
-## 感谢
-[BJUT_nCoV_Report](https://github.com/nonPointer/BJUT_nCoV_Report)
