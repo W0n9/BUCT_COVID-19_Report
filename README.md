@@ -47,6 +47,6 @@ sudo crontab -e
 
 每天早晨 6 点上报
 ```shell script
-0 6 * * * python3 main.py
+0 6 * * * python3 report.py
 ```
 
