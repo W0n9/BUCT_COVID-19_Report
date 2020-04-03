@@ -27,6 +27,8 @@
 
 可以使用`Fiddler` + `企业微信` 进行抓包获得cookies，需要进入Tools-Options-HTTPS处打开HTTPS流量解密，具体方法可参考[简书](https://www.jianshu.com/p/690eb9bebe3c)
 
+[抓包方法视频教程](https://www.bilibili.com/video/BV1bC4y147Pj)
+
 ![HTTPS设置](images/4.png)
 ![Fiddler截图](images/3.png)
 
