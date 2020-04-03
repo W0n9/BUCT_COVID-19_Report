@@ -20,7 +20,8 @@
     ```
 2. 修改 `report.py` 内的经纬度（可选)
 3. 填写 `province` 和 `city`避免报 `上报位置不能为空` 错误
-4. 安装所需依赖：`pip3 install requests`（Windows下请用命令提示符输入，报错请检查PATH；Linux在shell直接打就行）
+4. 安装所需依赖：`pip3 install requests` （Windows下请用命令提示符输入，报错请检查PATH；Linux在shell直接打就行）
+
 `若提示'pip' 不是内部或外部命令，也不是可运行的程序或批处理文件，请加入PATH`具体可参考[CSDN博客](https://blog.csdn.net/AlbenXie/article/details/79054409)
 5. 执行 `report.py`
 
