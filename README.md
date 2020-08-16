@@ -1,28 +1,19 @@
-<!--
- * @Author: your name
- * @Date: 2020-03-28 10:35:53
- * @LastEditTime: 2020-03-28 10:44:10
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \BUCT_nCoV_Report\README.md
- -->
 # BUCT_COVID-19_Report
-基于 Python3 的适用于北京化工大学的 COVID-19 自动填报脚本
-
+基于 Python3 的适用于北京化工大学的 COVID-19 自动填报脚本  
+现已适配新的打卡方式（俗称一日三打卡）  
 项目用于学习交流，仅用于各项无异常时打卡，如有身体不适等情况还请自行如实打卡
 
 ## 使用方式
 
-1. 在微信进入“疫情防控”页面，抓包获得'cookies'，修改'report.py'内的'cookies'值
-    ```text
-    'eai-sess':'', 
-	  'UUkey':''
+1. 在企业微信进入“返校打卡”页面，抓包获得'cookies'，修改`id.csv`内的`eai-sess`列(分隔符为`,`)
     ```
-2. 修改 `report.py` 内的经纬度（可选)
-3. 填写 `province` 和 `city`避免报 `上报位置不能为空` 错误；`address`为您的具体地址，如`广东省广州市海珠区阅江西路222号广州塔`；`area`为您所在的行政区域，如`广东省 广州市 海珠区`
-4. 安装所需依赖：`pip3 install requests` （Windows下请用命令提示符输入，报错请检查PATH；Linux在shell直接打就行）
+    name,eai-sess
+    ```
+2. 修改 `report.py` 内的经纬度（可选)  
+3. 填写 `province` 和 `city`避免报 `上报位置不能为空` 错误；`address`为您的具体地址，如`广东省广州市海珠区阅江西路222号广州塔`；`area`为您所在的行政区域，如`广东省 广州市 海珠区`  
+4. 安装所需依赖：`pip3 install requests` （Windows下请用命令提示符输入，报错请检查PATH；Linux在shell直接打就行）  
 
-`若提示'pip' 不是内部或外部命令，也不是可运行的程序或批处理文件，请加入PATH`具体可参考[CSDN博客](https://blog.csdn.net/AlbenXie/article/details/79054409)
+>>`若提示'pip' 不是内部或外部命令，也不是可运行的程序或批处理文件，请加入PATH`具体可参考[CSDN博客](https://blog.csdn.net/AlbenXie/article/details/79054409)
 
 5. 执行 `report.py`
 
