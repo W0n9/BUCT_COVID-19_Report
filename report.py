@@ -1,9 +1,9 @@
 import csv
 import json
-
+import time
 import requests
 
-filename = "id.csv"
+filename = "id.csv"  # 最好填写csv绝对路径，默认为$PWD工作路径
 url = "https://eai.buct.edu.cn/xisuncov/wap/open-report/save"
 
 if __name__ == '__main__':
@@ -69,4 +69,6 @@ if __name__ == '__main__':
             name = row[0]
             cookies['eai-sess'] = row[1]
             result = s.post(url, data=data, headers=headers, cookies=cookies)
-            print(name + ':' + json.loads(result.text)['m'])
+            print(
+                time.strftime("%m/%d %H:%M:%S ", time.localtime()) + name +
+                ' ' + json.loads(result.text)['m'])

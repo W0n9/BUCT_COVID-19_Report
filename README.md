@@ -1,4 +1,5 @@
 # BUCT_COVID-19_Report
+
 基于 Python3 的适用于北京化工大学的 COVID-19 自动填报脚本  
 现已适配新的打卡方式（俗称一日三打卡）  
 项目用于学习交流，仅用于各项无异常时打卡，如有身体不适等情况还请自行如实打卡
@@ -43,7 +44,13 @@ sudo crontab -e
 ```
 
 每天早晨 6 点上报
+
 ```shell script
 0 6 * * * python3 report.py
 ```
 
+每两小时上报一次并追加输出到日志
+
+```shell script
+0 */2 * * * python3 /root/report/report.py >> report.log
+```
