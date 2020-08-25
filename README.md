@@ -44,14 +44,13 @@ sudo crontab -e
 ```
 
 每天早晨 6 点上报
+
 ```shell script
 0 6 * * * python3 report.py
 ```
 
-每两小时上报一次输出到日志
-`必须输出到日志，否则自动化程序执行第一位同学后退出`
+每两小时上报一次并追加输出到日志
 
 ```shell script
 0 */2 * * * python3 /root/report/report.py >> report.log
 ```
-
