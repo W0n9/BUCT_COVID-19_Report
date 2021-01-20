@@ -4,7 +4,7 @@ import time
 import requests
 
 filename = "id.csv"  # 最好填写csv绝对路径，默认为$PWD工作路径
-url = "https://eai.buct.edu.cn/xisuncov/wap/open-report/save"
+url = "https://eai.buct.edu.cn/ncov/wap/default/save"
 
 if __name__ == '__main__':
 
@@ -15,16 +15,26 @@ if __name__ == '__main__':
     # report
     cookies = {}
     data = {
-        'sfzx': '1',  # 是否在校
+        'sfzx': '0',  # 是否在校
+        'sfzgn': '1',  # 所在地点中国大陆
+        'zgfxdp': '0',  # 不在中高风险地区
+        'jcjgqr': '0',  # 正常，非疑似/确诊
+        'sfcxtz': '0',  # 没有出现发热、乏力、干咳、呼吸困难等症状
+        'sfjcbh': '0',  # 今日是否接触无症状感染/疑似/确诊人群
+        'mjry': '0',  # 今日是否接触密接人员
+        'csmjry': '0',  # 近14日内本人/共同居住者是否去过疫情发生场所
+        'sfcyglq': '0',  # 是否处于观察期
+        'szsqsfybl': '0',  # 所在社区是否有确诊病例
+        'sfcxzysx': '0',  # 是否有任何与疫情相关的， 值得注意的情况
         'tw': '1',  # 体温范围（下标从 1 开始），此处是36 - 36.5
-        'area': '北京市 昌平区',  # 所在区域
-        'province': '北京市',  # 所在省
-        'city': '北京市',  # 所在市
-        'address': '北京市昌平区南口镇南涧路29号北京化工大学昌平校区',  # 地址
-        'sfcyglq': '0',  # 是否处于隔离期
-        'sfyzz': '0',  # 是否有症状
-        'askforleave': '0',  # 是否请假外出
-        'qtqk': '',  #其他情况
+        'area': '上海市 静安区',  # 所在区域
+        'province': '上海市',  # 所在省
+        'city': '上海市',  # 所在市
+        'address': '上海市静安区南京西路1686号静安寺',  # 地址
+        # 'sfcyglq': '0',  # 是否处于隔离期
+        # 'sfyzz': '0',  # 是否有症状
+        # 'askforleave': '0',  # 是否请假外出
+        'qksm': '',  #其他情况
         'geo_api_info': {
             'type': 'complete',
             'info': 'SUCCESS',
