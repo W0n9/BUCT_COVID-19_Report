@@ -6,6 +6,14 @@ import requests
 filename = "id.csv"  # 最好填写csv绝对路径，默认为$PWD工作路径
 url = "https://eai.buct.edu.cn/ncov/wap/default/save"
 
+
+def post_and_print(s, url, data, headers, cookies):
+    result = s.post(url, data=data, headers=headers, cookies=cookies)
+    print(
+        time.strftime("%m/%d %H:%M:%S ", time.localtime()) + name + ' ' +
+        json.loads(result.text)['m'])
+
+
 if __name__ == '__main__':
 
     # init
@@ -27,10 +35,10 @@ if __name__ == '__main__':
         'szsqsfybl': '0',  # 所在社区是否有确诊病例
         'sfcxzysx': '0',  # 是否有任何与疫情相关的， 值得注意的情况
         'tw': '1',  # 体温范围（下标从 1 开始），此处是36 - 36.5
-        'area': '上海市 静安区',  # 所在区域
-        'province': '上海市',  # 所在省
-        'city': '上海市',  # 所在市
-        'address': '上海市静安区南京西路1686号静安寺',  # 地址
+        'area': '西藏自治区 日喀则市 定日县',  # 所在区域
+        'province': '西藏自治区',  # 所在省
+        'city': '日喀则市',  # 所在市
+        'address': '西藏自治区日喀则市定日县珠峰大本营',  # 地址
         # 'sfcyglq': '0',  # 是否处于隔离期
         # 'sfyzz': '0',  # 是否有症状
         # 'askforleave': '0',  # 是否请假外出
@@ -78,7 +86,23 @@ if __name__ == '__main__':
         for row in reader:
             name = row[0]
             cookies['eai-sess'] = row[1]
-            result = s.post(url, data=data, headers=headers, cookies=cookies)
-            print(
-                time.strftime("%m/%d %H:%M:%S ", time.localtime()) + name +
-                ' ' + json.loads(result.text)['m'])
+            at_school_status = row[2]
+            custom_area_status = row[3]
+            if at_school_status == '1':  #   判断在校同学
+                at_school_data = data
+                at_school_data.update(sfzx='1',
+                                      area='北京市 朝阳区',
+                                      province='北京市',
+                                      city='北京市',
+                                      address='北京市朝阳区北三环东路15号北京化工大学')
+                post_and_print(s, url, at_school_data, headers, cookies)
+                continue
+            if custom_area_status == '1':  #   判断自定义位置
+                custom_area_data = data
+                custom_area_data.update(area=row[4],
+                                        province=row[4].split()[0],
+                                        city=row[4].split()[1],
+                                        address=row[4])
+                post_and_print(s, url, custom_area_data, headers, cookies)
+                continue
+            post_and_print(s, url, data, headers, cookies)
