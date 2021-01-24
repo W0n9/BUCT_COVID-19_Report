@@ -89,7 +89,7 @@ if __name__ == '__main__':
             at_school_status = row[2]
             custom_area_status = row[3]
             if at_school_status == '1':  #   判断在校同学
-                at_school_data = data
+                at_school_data = data.copy()
                 at_school_data.update(sfzx='1',
                                       area='北京市 朝阳区',
                                       province='北京市',
@@ -98,7 +98,7 @@ if __name__ == '__main__':
                 post_and_print(s, url, at_school_data, headers, cookies)
                 continue
             if custom_area_status == '1':  #   判断自定义位置
-                custom_area_data = data
+                custom_area_data = data.copy()
                 custom_area_data.update(area=row[4],
                                         province=row[4].split()[0],
                                         city=row[4].split()[1],
