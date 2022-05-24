@@ -1,12 +1,15 @@
 # BUCT_COVID-19_Report
 
 基于 Python3 的适用于北京化工大学的 COVID-19 自动填报脚本  
-现已适配2021年寒假打卡方式
+现已适配2022年打卡方式  
+**NEW**: 更新不需要抓包获取cookies的方式  
+
 项目用于学习交流，仅用于各项无异常时打卡，如有身体不适等情况还请自行如实打卡
 
 ## 使用方式
 
-1. 在企业微信进入“返校打卡”页面，抓包获得'cookies'，修改`id.csv`内的`eai-sess`列(分隔符为`,`)
+1. ~~在企业微信进入“返校打卡”页面，抓包获得'cookies'，~~  
+打开企业微信时，按`Ctrl+Alt+Shift+D`组合键进入调试模式，进入“返校打卡”页面，使用DevTools抓包获得`cookies`，修改`id.csv`内的`eai-sess`列(分隔符为`,`)
     ```
     name_id,eai-sess,at_school,custom_area,area
     ```
