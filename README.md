@@ -31,6 +31,9 @@
 
 可以使用`Fiddler` + `企业微信` 进行抓包获得cookies，需要进入Tools-Options-HTTPS处打开HTTPS流量解密，具体方法可参考[简书](https://www.jianshu.com/p/690eb9bebe3c)
 
+建议端口号设置成8888，一开始我开着jupyter notebook打开Fiddler，8888端口被占用，换用了其他的随机的一个端口，结果一直找不到企业微信对应的cookies，端口也改不了，所以我关闭了jupyter notebook，将Fiddler卸载重装了一下，用了8888端口，才抓到包。
+
+
 ![HTTPS设置](images/4.png)
 ![Fiddler截图](images/3.png)
 
